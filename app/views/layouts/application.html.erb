@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BlocChatRails</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="column full" ng-controller="HomeCtrl as home">
+    <section class="chat-rooms-container column third">
+      <h1 class="bloc-chat-header">Bloc Chat</h1>
+      <div class="chat-rooms-list">
+        <h4 class="chat-room" ng-repeat="room in home.chatRooms">
+          {{room.name}}
+        </h4>
+      </div>
+    </section>
+    <section class="chat-room-window column two-thirds">
+      <ui-view><ui-view>
+    </section>
+  </div>
 
-  <ui-view><ui-view>
 
+  <%= javascript_include_tag 'application' %>
 </body>
 </html>

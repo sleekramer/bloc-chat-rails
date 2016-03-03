@@ -1,1 +1,8 @@
-
+<div class="home" ng-controller="HomeCtrl as home">
+  <h1 class="bloc-chat-header">Bloc Chat</h1>
+  <div class="chat-rooms-list">
+    <h4 class="chat-room" ng-repeat="room in home.chatRooms">
+      {{room.name}}
+    </h4>
+  </div>
+</div>
