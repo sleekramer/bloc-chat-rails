@@ -1,0 +1,21 @@
+.chat-rooms-container {
+  background-color: rgb(215, 208, 226);
+  padding-left: 3rem;
+  height: 100vh;
+}
+
+.bloc-chat-header {
+
+}
+
+.chat-rooms-list {
+  padding-left: 1rem;
+}
+
+.chat-room {
+  font-weight: 500;
+}
+
+.chat-room-window {
+
+}

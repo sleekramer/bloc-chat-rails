@@ -5,12 +5,9 @@
         enabled: true,
         requireBase: false
       });
-    $stateProvider
-      .state('home', {
-        url: '/',
-        controller: 'HomeCtrl as home',
-        templateUrl: 'home/_home.html'
-      });
+    // $stateProvider
+    //   .state(
+    //   );
   }
   angular
     .module("blocChat", ["ui.router", "templates"])

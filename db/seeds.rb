@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+ChatRoom.create!(name: "General Discussion")
+ChatRoom.create!(name: "american football")
+ChatRoom.create!(name: "angularjs with ruby on rails")
+ChatRoom.create!(name: "things that work")
+ChatRoom.create!(name: "world peace")
+
+puts "Total Number of ChatRooms: #{ChatRoom.count}"
