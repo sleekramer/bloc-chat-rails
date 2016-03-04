@@ -10,6 +10,6 @@
     //   );
   }
   angular
-    .module("blocChat", ["ui.router", "templates"])
+    .module("blocChat", ["ui.router", "templates", "ui.bootstrap"])
     .config(config);
 })();

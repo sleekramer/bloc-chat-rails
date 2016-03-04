@@ -19,6 +19,20 @@
       });
     };
 
+    /**
+    * @function createRoom()
+    * @desc POST a chatRoom object to the server
+    * @param {Object} chatRoom with name attribute
+    * @return {Object} chatRoom
+    */
+    ChatRooms.createRoom = function (chatRoom) {
+      return $http.post('/chat_rooms', chatRoom).then(function success(data) {
+        ChatRooms.allRooms.push(data.data);
+      }, function error (rejection) {
+        console.log(rejection);
+      })
+    };
+
     return ChatRooms;
   }
   angular

@@ -1,21 +1,31 @@
-.chat-rooms-container {
+.chat-rooms {
   background-color: rgb(215, 208, 226);
   padding-left: 3rem;
   height: 100vh;
 }
 
 .bloc-chat-header {
+  display: inline-block;
+  padding-left: 1rem;
+}
 
+button.modal-button {
+  margin: 2rem 0 0 3rem;
 }
 
 .chat-rooms-list {
-  padding-left: 1rem;
+  padding-left: 3rem;
+  margin-top: 3rem;
 }
 
 .chat-room {
   font-weight: 500;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: solid rgb(160, 160, 160) 1px;
+  padding-bottom: 1rem;
 }
 
 .chat-room-window {
-
+  height: 100vh;
 }
