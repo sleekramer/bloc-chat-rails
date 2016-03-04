@@ -10,53 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require inuit-normalize.css/_generic.normalize.scss
+ *= require bootstrap/dist/css/bootstrap
  *= require_tree .
  *= require_self
  */
-*, *::before, *::after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-html {
-  height: 100%;
-  font-size: 100%;
-}
-
-body {
-  min-height: 100%;
-}
-
-/* Medium and small screens */
-@media (min-width: 640px) {
-  html {font-size: 112%;}
-  .column {
-    float: left;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    
-  }
-  .column.full { width: 100%; }
-  .column.two-thirds { width: 66.7%; }
-  .column.half { width: 50%; }
-  .column.third { width: 33.3%; }
-  .column.fourth { width: 25%; }
-  .column.flow-opposite { float: right;}
-}
-/* Large screens */
-@media (min-width: 1024px) {
-  html {font-size: 120%;}
-
-}
-
-.clearfix::before,
-.clearfix::after {
-   content: " ";
-   display: table;
-}
-
-.clearfix::after {
-   clear: both;
-}

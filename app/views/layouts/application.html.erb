@@ -9,20 +9,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="column full" ng-controller="HomeCtrl as home">
-    <section class="chat-rooms-container column third">
-      <h1 class="bloc-chat-header">Bloc Chat</h1>
-      <div class="chat-rooms-list">
-        <h4 class="chat-room" ng-repeat="room in home.chatRooms">
-          {{room.name}}
-        </h4>
-      </div>
-    </section>
-    <section class="chat-room-window column two-thirds">
-      <ui-view><ui-view>
-    </section>
+  <div class="container-fluid">
+    <div class="row">
+      <section class="chat-rooms col-md-3" ng-controller="HomeCtrl as home">
+        <div ng-controller="ModalCtrl as modal">
+          <h1 class="bloc-chat-header">Bloc Chat</h1>
+          <button type="button" class="btn btn-default modal-button" ng-click="modal.open()">New Room</button>
+        </div>
+        <div class="chat-rooms-list">
+          <h4 class="chat-room" ng-repeat="room in home.chatRooms">
+            {{room.name}}
+          </h4>
+        </div>
+      </section>
+      <section class="chat-room-window col-md-9">
+        <ui-view><ui-view>
+      </section>
+    </div>
   </div>
-
 
   <%= javascript_include_tag 'application' %>
 </body>

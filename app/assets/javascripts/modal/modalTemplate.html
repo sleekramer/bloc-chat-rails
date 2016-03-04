@@ -1,0 +1,16 @@
+<div class="modal-header">
+    <h3 class="modal-title">Create New Room</h3>
+</div>
+<div class="modal-body">
+  <form class="chatRoomForm form-group">
+    <label>
+      Enter New Chat Room Name:
+    </br>
+    <input class="form-control" type="text" name="name" ng-model="newRoom.name" required>
+    </label>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-default" type="button" ng-click="modalInstance.cancel()">Cancel</button>
+  <button class="btn btn-primary" type="button" ng-click="modalInstance.submit()">Submit</button>
+</div>
