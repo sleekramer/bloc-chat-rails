@@ -20,12 +20,31 @@ button.modal-button {
 
 .chat-room {
   font-weight: 500;
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+
   border-bottom: solid rgb(160, 160, 160) 1px;
-  padding-bottom: 1rem;
 }
 
 .chat-room-window {
   height: 100vh;
+}
+
+a.chat-room-link {
+  text-decoration: none;
+
+}
+
+h4.chat-room-name {
+  padding: 2rem 0 2rem 2rem;
+  color: rgb(0,0,0);
+  margin: 0;
+}
+.chat-room:hover {
+  cursor: pointer;
+  background-color: rgba(189, 167, 224, 0.7);
+}
+.chat-room:hover h4.chat-room-name {
+  color: rgb(255,255,255);
+}
+a.chat-room-link:active h4.chat-room-name {
+  color: rgb(0,0,0);
 }

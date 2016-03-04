@@ -1,0 +1,19 @@
+<div class="room-name">
+  <div class="row">
+    <h3>{{ room.name }}</h3>
+  </div>
+</div>
+<div class="room-messages">
+  <div class="row room-message" ng-repeat="message in room.messages">
+    <div class="col-md-10 message-text">
+      <p>
+        {{ message.text }}
+      </p>
+    </div>
+    <div class="col-md-2 created-at">
+      <p>
+        {{ message.created_at | date : 'short' }}
+      </p>
+    </div>
+  </div>
+</div>

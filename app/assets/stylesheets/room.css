@@ -1,0 +1,23 @@
+.room-name {
+  padding: 0 0 1rem 3rem;
+  margin-bottom: 3rem;
+  border-bottom: solid rgb(160,160,160) 2px;
+}
+
+.room-messages {
+  padding-left: 4rem;
+}
+
+
+
+.room-message {
+  padding: 1rem 0 0 2rem;
+}
+
+.room-message:nth-of-type(even) {
+  background-color: rgb(215, 208, 226);
+}
+
+.room-message p {
+  vertical-align: middle;
+}

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BlocChatRails</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -17,9 +17,14 @@
           <button type="button" class="btn btn-default modal-button" ng-click="modal.open()">New Room</button>
         </div>
         <div class="chat-rooms-list">
-          <h4 class="chat-room" ng-repeat="room in home.chatRooms">
-            {{room.name}}
-          </h4>
+          <div class="chat-room" ng-repeat="room in home.chatRooms">
+            <a class="chat-room-link" ui-sref="room({id:{{room.id}}})">
+              <h4 class="chat-room-name">
+                {{ room.name }}
+              </h4>
+            </a>
+          </div>
+
         </div>
       </section>
       <section class="chat-room-window col-md-9">
@@ -28,6 +33,6 @@
     </div>
   </div>
 
-  <%= javascript_include_tag 'application' %>
+
 </body>
 </html>
