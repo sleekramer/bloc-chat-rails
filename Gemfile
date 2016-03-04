@@ -20,6 +20,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'faker', '~>1.6.3'
 end
 group :production do
   gem 'rails_12factor'
