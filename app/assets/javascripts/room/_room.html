@@ -1,19 +1,30 @@
-<div class="room-name">
-  <div class="row">
-    <h3>{{ room.name }}</h3>
-  </div>
-</div>
-<div class="room-messages">
-  <div class="row room-message" ng-repeat="message in room.messages">
-    <div class="col-md-10 message-text">
-      <p>
-        {{ message.text }}
-      </p>
+<div class="container">
+  <div class="room-name">
+    <div class="row">
+      <h3>{{ room.name }}</h3>
     </div>
-    <div class="col-md-2 created-at">
-      <p>
-        {{ message.created_at | date : 'short' }}
-      </p>
+  </div>
+  <div class="room-messages">
+    <div class="row room-message" ng-repeat="message in room.messages">
+      <div class="col-md-7 message-text">
+        <h5><strong>{{ message.username }}:</strong></h5>
+        <p class ="tabbed">
+          {{ message.text }}
+        </p>
+      </div>
+      <div class="col-md-2 created-at">
+        <p>
+          {{ message.created_at | date : 'short' }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row new-message">
+    <div class="col-md-10 new-message-input">
+      <input class="form-control"type="text" name="message" ng-model="newMessageText" required placeholder="Enter new message here...">
+    </div>
+    <div class="col-md-2 new-message-submit">
+      <button class="btn btn-primary" type="button" ng-click="room.submitMessage()">Send</button>
     </div>
   </div>
 </div>

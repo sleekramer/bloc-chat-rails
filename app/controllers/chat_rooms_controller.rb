@@ -8,7 +8,7 @@ class ChatRoomsController < ApplicationController
   def show
     chat_room = ChatRoom.find(params[:id])
     if chat_room
-      render json: chat_room.as_json(include: {messages: {only: [:text, :created_at]}}), status: 200
+      render json: chat_room.as_json(include: {messages: {only: [:text, :created_at, :username]}}), status: 200
     else
       render json: { name: "No chat room here..."}.to_json, status: 200
     end

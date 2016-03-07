@@ -14,6 +14,12 @@ unless Message.count > 0
   end
 end
 
+usernames = ["Steven", "JoeBlocChat", "SteelyDan", "TheWhiteWizard", "Kurt Russell"]
+messages_without_username = Message.where(username: nil)
+messages_without_username.each do |message|
+  message.update_attribute(:username, usernames.sample)
+end
+
 puts "Seed Finished"
 puts "Total Number of Posts #{Message.count}"
 puts "Total Number of ChatRooms: #{ChatRoom.count}"
