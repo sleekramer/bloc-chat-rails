@@ -14,3 +14,7 @@
  *= require_tree .
  *= require_self
  */
+
+.btn.set-username-button {
+  width: 100%;
+}

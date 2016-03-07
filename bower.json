@@ -20,6 +20,7 @@
     "angular-ui-router": "^0.2.18",
     "inuit-normalize.css": "inuit-normalize#^3.0.3",
     "angular-bootstrap": "^1.2.2",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "angular-cookies": "^1.5.0"
   }
 }
